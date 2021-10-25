@@ -12,6 +12,7 @@ app.use(morgan('dev'));
 //Create an Express application that sets a cookie when routed to /login with their name
 app.get('/login', (req, res) => {
     res.cookie('name', req.params.name);
+    res.end();
 });
 
 
@@ -23,3 +24,4 @@ app.get('/hello', (req, res) => {
         res.send('Please login');
     }
 });
+
