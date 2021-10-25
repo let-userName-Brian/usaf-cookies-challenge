@@ -17,8 +17,8 @@ app.get('/login', (req, res) => {
 
 //If a cookie is present with a name key, then it says "Welcome {name}! when the user routes to /hello"
 app.get('/hello', (req, res) => {
-    if (req.cookies.cookie) {
-        res.send(`Welcome ${req.cookies.cookie}!`);
+    if (req.cookies.name) {
+        res.send(`Welcome ${req.cookies.name}!`);
     } else {
         res.send('Please login');
     }
